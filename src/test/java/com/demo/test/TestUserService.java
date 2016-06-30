@@ -15,17 +15,12 @@ public class TestUserService {
 	private IUserService userService;
 	
 	 @Before
-
-	    public void before(){                                                                    
-
-	        @SuppressWarnings("resource")
-
-	        ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath:conf/spring.xml"
-
-	                ,"classpath:conf/spring-mybatis.xml"});
+	 public void before(){
+	 	@SuppressWarnings("resource")
+	 	ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"classpath:conf/spring.xml"
+	 	,"classpath:conf/spring-mybatis.xml"});
 
 	        userService = (IUserService) context.getBean("userServiceImpl");
-
 	    }
 	
 	/*@Test*/
